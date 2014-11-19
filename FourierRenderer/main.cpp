@@ -191,5 +191,5 @@ int main(int argc, const char* argv[])
                 open=!open;
             }
     }
-        return 0;
-    }
+    return 0;
+}
