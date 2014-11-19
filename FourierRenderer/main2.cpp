@@ -143,7 +143,7 @@ int main(int argc, const char* argv[])
     
     for (int i = 0; i < asize; i++)
     {
-        fout<<floor(.5+precOut*real(data[i]))/precOut<<"Cos[-160*Pi*"<<i<<"*t]+"<<floor(.5+inverseTransform*precOut*imag(data[i]))/precOut<<"Sin[-160*Pi*"<<i<<"*t]+"; // Writes values to file with given precision
+        fout<<floor(.5+precOut*real(data[i]))/precOut<<"Cos[160*Pi*"<<i<<"*t]"<<floor(.5+inverseTransform*precOut*imag(data[i]))/precOut<<"Sin[160*Pi*"<<i<<"*t]+"; // Writes values to file with given precision
     }
     
     SDL_SetRenderDrawColor(renderer,50,100,200,60); // Transform axis color

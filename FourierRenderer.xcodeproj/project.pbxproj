@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		34C8730119DD788800387A38 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34C8730019DD788800387A38 /* main.cpp */; };
 		34C8730319DD788800387A38 /* FourierRenderer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34C8730219DD788800387A38 /* FourierRenderer.1 */; };
+		34C8730A19DD7A8D00387A38 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C8730919DD7A8D00387A38 /* OpenGL.framework */; };
+		34C8730E19DD7F1300387A38 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C8730D19DD7F1300387A38 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,8 @@
 		34C872FD19DD788800387A38 /* FourierRenderer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FourierRenderer; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C8730019DD788800387A38 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		34C8730219DD788800387A38 /* FourierRenderer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FourierRenderer.1; sourceTree = "<group>"; };
+		34C8730919DD7A8D00387A38 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		34C8730D19DD7F1300387A38 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C8730A19DD7A8D00387A38 /* OpenGL.framework in Frameworks */,
+				34C8730E19DD7F1300387A38 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 		34C872F419DD788800387A38 = {
 			isa = PBXGroup;
 			children = (
+				34C8730D19DD7F1300387A38 /* SDL2.framework */,
+				34C8730919DD7A8D00387A38 /* OpenGL.framework */,
 				34C872FF19DD788800387A38 /* FourierRenderer */,
 				34C872FE19DD788800387A38 /* Products */,
 			);
@@ -197,6 +205,11 @@
 		34C8730719DD788800387A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eric.zelikman/Downloads,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +217,11 @@
 		34C8730819DD788800387A38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eric.zelikman/Downloads,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -227,6 +245,7 @@
 				34C8730819DD788800387A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
