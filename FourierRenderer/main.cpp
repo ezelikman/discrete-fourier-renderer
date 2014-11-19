@@ -10,7 +10,6 @@
 using namespace std;
 typedef complex<double> compDouble;
 
-
 vector<compDouble> slicer(vector<compDouble>& x, bool parity) // Return every other odd or even value in a vector
 {
     vector<compDouble> slicedval(x.size()/2); // Creates an array with half the size of the original
@@ -36,7 +35,6 @@ double extremaArray (vector<compDouble> datain, double inverseTransformn, string
     else if (extremaType=="max") return maxivalf;
     throw;
 }
-
 
 vector<compDouble> loadArray(string filename) // Load the complex vector array's real part from a file
 {
@@ -134,9 +132,7 @@ int main(int argc, const char* argv[])
     SDL_SetRenderDrawColor(renderer,30,30,0,20); // Data marker line color
     if (asize<winsizex/2) for (int i = 0; i < asize; i++) SDL_RenderDrawLine(renderer, i*winsizex/asize, 0, i*winsizex/asize, winsizey); // Marks datapoints with lines
     
-    
     FT(data); // The transform is performed
-    
     
     double maxval=extremaArray(data,inverseTransform, "max"); // New extreme found
     double minval=extremaArray(data,inverseTransform, "min");
@@ -195,16 +191,5 @@ int main(int argc, const char* argv[])
                 open=!open;
             }
     }
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         return 0;
     }
